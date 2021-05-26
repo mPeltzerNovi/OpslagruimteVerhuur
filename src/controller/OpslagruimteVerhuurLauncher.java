@@ -7,7 +7,7 @@ public class OpslagruimteVerhuurLauncher {
     final static int MAANDEN_BASIS_TARIEF = 2; //je krijgt twee maanden lang het basis tarief
     final static double BASIS_TARIEF = 100; //het basis tarief is 100 euro per maand.
     final static double GEWOON_TARIEF = 150; //het gewone (verdere) maandtarief is 150 euro per maand
-    final static double MAANDKAART_TARIEF = 120; //Als je voor 1 maand huurt kost dat 120 euro
+    final static double JAARKAART_TARIEF = 1000; //Als je voor 1 maand huurt kost dat 120 euro
 
     //Stap 2: Nu de main methode schrijven
     public static void main(String[] args) {
@@ -68,8 +68,8 @@ public class OpslagruimteVerhuurLauncher {
         } else {
             result = MAANDEN_BASIS_TARIEF * BASIS_TARIEF + (looptijd - MAANDEN_BASIS_TARIEF) * GEWOON_TARIEF;
         }
-        if (result > MAANDKAART_TARIEF) {
-            result = MAANDKAART_TARIEF;
+        if (result > JAARKAART_TARIEF) {
+            result = JAARKAART_TARIEF;
         }
         return result;
     }
